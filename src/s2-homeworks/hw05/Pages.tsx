@@ -20,7 +20,7 @@ function Pages() {
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
                 {/*<Route path={"/"} element={<PreJunior/>}/>*/}
                 {/*<Navigate to={PATH.PRE_JUNIOR} />*/}
-                <Route path={"/"} element={<Navigate to={PATH.PRE_JUNIOR} replace/>}/>
+                <Route path={"/"} element={<Navigate to={PATH.PRE_JUNIOR}  replace/>}/>
 
                 {/*роуты для /pre-junior, /junior, /junior-plus*/}
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
@@ -28,7 +28,8 @@ function Pages() {
                 <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
 
                 {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
-                <Route element={<Error404/>}/>
+                <Route path={"*"} element={<Navigate to="/404" replace />} />
+                <Route path={"/404"} element={<Error404 />} />
             </Routes>
         </div>
     )
