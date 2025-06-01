@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import { restoreState, saveState } from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
@@ -33,6 +33,7 @@ function Clock() {
     const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
         setShow(false)
     }
+
 
     const stringTime = `(${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()})` || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = `(${date.getUTCDate()}.${date.getUTCMonth()+1}.${date.getUTCFullYear()})` || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
