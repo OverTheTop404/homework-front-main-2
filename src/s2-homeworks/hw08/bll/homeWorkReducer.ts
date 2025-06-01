@@ -18,3 +18,5 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
             return state
     }
 }
+
+//AssertionError: expected [ 55, 40, 44, 66 ] to deeply equal [ 66, 44, 40, 55 ]
